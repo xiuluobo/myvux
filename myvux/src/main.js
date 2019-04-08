@@ -1,13 +1,30 @@
-// The Vue build version to load with the `import` command
-// (runtime-only or standalone) has been set in webpack.base.conf with an alias.
 import Vue from 'vue'
 import App from './App'
+import router from './router'
+import  { ToastPlugin } from "vux"
+import  { LoadingPlugin } from 'vux'
+
+Vue.use(ToastPlugin)
+Vue.use(LoadingPlugin)
+
 
 Vue.config.productionTip = false
 
-/* eslint-disable no-new */
+
+
+
+Vue.prototype.changeJump=function(path,query){
+    this.$router.push({
+        path,
+        query,
+    })
+}
+
+  
+
 new Vue({
   el: '#app',
   components: { App },
+  router,
   template: '<App/>'
 })
