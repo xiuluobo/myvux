@@ -20,8 +20,8 @@ html,body{
 *{
     margin: 0;
     padding: 0;
-    border: 0;
-    outline: 0;
+ /*    border: 0;
+ outline: 0; */
 }
 body{
     font-family:PingFang-SC-Regular;
@@ -59,6 +59,6 @@ table {
 /*vux  loading*/
 .weui-toast{
     width:6.6em !important;
-    min-height: 6.6em !important;
+    //min-height: 6.6em !important;
 }
 </style>

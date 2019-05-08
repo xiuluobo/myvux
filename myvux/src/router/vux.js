@@ -6,16 +6,13 @@ let router=[
     {
         path: '/bar2',
         component: Bar2,
-        beforEnter(to,from,next){
-            //document.getElementById('QF').innerHTML="问诊"
-        }
+        meta:{
+            title:"aaaa"
+        },
     },
     {
         path: '/loading',
         component: Loading,
-        beforEnter(to,from,next){
-            //document.getElementById('QF').innerHTML="问诊"
-        }
     },
     {
         path: '/toast',
@@ -24,5 +21,13 @@ let router=[
             //document.getElementById('QF').innerHTML="问诊"
         }
     },
+    {
+        path:'/login',
+        redirect: "/bar2"
+    },
+    {
+        path: "*",
+        redirect: "/"
+    }
 ]
 export default router
